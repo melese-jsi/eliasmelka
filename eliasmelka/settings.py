@@ -79,10 +79,20 @@ WSGI_APPLICATION = 'eliasmelka.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'eliasmelka',
+        'USER': 'postgres',
+        'PASSWORD': 'chapesio',
+        'HOST': 'localhost',
     }
 }
 
@@ -134,4 +144,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 AUTH_USER_MODEL = 'authentication.User'
-ALLOWED_HOSTS = ['mtamiru.pythonanywhere.com']
