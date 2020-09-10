@@ -87,12 +87,12 @@ WSGI_APPLICATION = 'eliasmelka.wsgi.application'
 # }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'eliasmelka',
-        'USER': 'postgres',
+      'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mtamiru$eliasmelka',
+        'USER': 'mtamiru',
         'PASSWORD': 'chapesio',
-        'HOST': 'localhost',
+        'HOST': 'mtamiru.mysql.pythonanywhere-services.com',
     }
 }
 
