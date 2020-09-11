@@ -12,3 +12,7 @@ def album_detail(request,album_id):
 def recent_releases(request):
     albums = Music.objects.filter(release_year__gte = 2008)
     return render(request, 'home/recent_releases.html', {'albums': albums})
+
+def popular_albums(request):
+    albums = Music.objects.filter(is_popular__exact = True)
+    return render(request, 'home/popular_albums.html', {'albums': albums})
