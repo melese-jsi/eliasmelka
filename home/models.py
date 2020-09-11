@@ -18,6 +18,7 @@ class Music(Model):
     is_album = models.BooleanField(default=True)
     is_sound_track = models.BooleanField(default=False)
     is_community_work = models.BooleanField(default=False)
+    is_popular = models.BooleanField(default=False)
 
 
     def __str__(self):
