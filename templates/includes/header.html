@@ -11,21 +11,25 @@
             </div>
             <nav class="tm-nav" id="tm-nav">
                 <ul>
-                    <li class="tm-nav-item active"><a href="index.html" class="tm-nav-link">
+                    <li class="tm-nav-item active"><a href="{% url 'home/recent_releases' %}" class="tm-nav-link">
                         <i class="fas fa-home"></i>
-                        Featured Albums
+                         Recent Releases
                     </a></li>
                     <li class="tm-nav-item"><a href="post.html" class="tm-nav-link">
                         <i class="fas fa-pen"></i>
-                        Singles
+                        Most Popular
                     </a></li>
                     <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
                         <i class="fas fa-users"></i>
-                        Interviews
+                        Comming Soon
                     </a></li>
                     <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
                         <i class="far fa-comments"></i>
-                        Contact Us
+                        Community Songs
+                    </a></li>
+                <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        Interviews
                     </a></li>
                     {% if user.is_authenticated %}
                         <li class="tm-nav-item"><a href="{% url 'signout' %}" class="tm-nav-link">
