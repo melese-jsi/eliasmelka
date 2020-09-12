@@ -8,6 +8,8 @@ class Interview(Model):
     link =models.URLField(max_length=300)
     title = models.CharField(max_length=255,blank=True)
     picture = models.ImageField(upload_to='album_arts/')
+    def __str__(self):
+        return self.title
 
 
 class Music(Model):

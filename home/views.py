@@ -22,7 +22,7 @@ def community_songs(request):
     albums = Music.objects.filter(is_community_song__exact=True)
     return render(request, 'home/community_songs.html', {'albums': albums})
 def all_albums(request):
-    albums = Music.objects.all()
+    albums = Music.objects.filter(is_album__exact=True)
     return render(request, 'home/home.html', {'albums': albums})
 
 def interviews(request):
