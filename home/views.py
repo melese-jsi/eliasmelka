@@ -16,3 +16,6 @@ def recent_releases(request):
 def popular_albums(request):
     albums = Music.objects.filter(is_popular__exact = True)
     return render(request, 'home/popular_albums.html', {'albums': albums})
+def community_songs(request):
+    albums = Music.objects.filter(is_community_song__exact=True)
+    return render(request, 'home/community_songs.html', {'albums': albums})
