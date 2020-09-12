@@ -1,7 +1,8 @@
 from django.contrib import admin
 
 from comments.models import Comment
-from .models import Music
+from .models import Music, Interview
+
 
 # Register your models here.
 class commentAdmin(admin.TabularInline):
@@ -11,3 +12,4 @@ class musicAdmin(admin.ModelAdmin):
     inlines = [commentAdmin]
 admin.site.register(Music, musicAdmin)
 admin.site.register(Comment)
+admin.site.register(Interview)
