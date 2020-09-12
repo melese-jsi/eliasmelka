@@ -13,6 +13,7 @@ def album_detail(request,album_id):
 
 def recent_releases(request):
     albums = Music.objects.filter(release_year__gte = 2008)
+    albums = albums.order_by('release_year')
     return render(request, 'home/recent_releases.html', {'albums': albums})
 
 def popular_albums(request):
