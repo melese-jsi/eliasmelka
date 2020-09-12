@@ -3,6 +3,12 @@ from django.db import models
 # Create your models here.
 from django.db.models import Model
 
+class Interview(Model):
+    interview_with =models.TextField()
+    link =models.URLField(max_length=300)
+    title = models.CharField(max_length=255,blank=True)
+    picture = models.ImageField(upload_to='album_arts/')
+
 
 class Music(Model):
     title = models.CharField(max_length=255,)

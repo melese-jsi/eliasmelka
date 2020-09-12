@@ -1,5 +1,7 @@
 from django.shortcuts import render,get_object_or_404
-from .models import Music
+from .models import Music, Interview
+
+
 # Create your views here.
 def home(request):
     albums = Music.objects.all()
@@ -19,3 +21,10 @@ def popular_albums(request):
 def community_songs(request):
     albums = Music.objects.filter(is_community_song__exact=True)
     return render(request, 'home/community_songs.html', {'albums': albums})
+def all_albums(request):
+    albums = Music.objects.all()
+    return render(request, 'home/home.html', {'albums': albums})
+
+def interviews(request):
+    interviews = Interview.objects.all()
+    return render(request,'home/interviews.html',{'interviews':interviews})

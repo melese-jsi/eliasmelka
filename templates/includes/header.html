@@ -16,20 +16,25 @@
                          Recent Releases
                     </a></li>
                     <li class="tm-nav-item"><a href="{% url 'popular_albums' %}" class="tm-nav-link">
-                        <i class="fas fa-pen"></i>
+                        <i class="fas fa-fire"></i>
                         Most Popular
                     </a></li>
                     <li class="tm-nav-item"><a href="#" class="tm-nav-link">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-fire"></i>
                         Comming Soon
                     </a></li>
                     <li class="tm-nav-item"><a href="{% url 'community_songs' %}" class="tm-nav-link">
-                        <i class="far fa-comments"></i>
+                        <i class="far fa-school"></i>
                         Community Songs
                     </a></li>
                        <li class="tm-nav-item"><a href=" url 'interviews'  %}" class="tm-nav-link">
-                        <i class="far fa-comments"></i>
+                        <i class="far fa-podcast"></i>
                         Interviews
+                    </a></li>
+
+                       <li class="tm-nav-item"><a href=" url 'all_albums'  %}" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        All Albums
                     </a></li>
                     {% if user.is_authenticated %}
                         <li class="tm-nav-item"><a href="{% url 'signout' %}" class="tm-nav-link">
